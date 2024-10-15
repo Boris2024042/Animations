@@ -1,0 +1,101 @@
+:root{
+    --add_color: rgb(38, 0, 255);
+    --color1: rgb(116 137 255);
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* =====================================================================? */
+/* Это от 1-й кнопки */
+
+.btn_krushok {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    background-color: orange;
+    box-shadow: inset 3px -3px 5px black, inset -3px 3px 5px white;
+    border: none;
+    border-radius: 5px;
+    transition: transform 1s, background-color 1s;
+
+}
+.btn_krushok:hover {
+    transform: rotateZ(360deg);
+    background-color: rgb(255, 202, 105);
+}
+
+
+
+
+/* =====================================================================? */
+/* Это от 2-й кнопки */
+
+.btn_learnWhereIsCursor {
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.btn_learnWhereIsCursor div {
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px var(--add_color), 0px 0px 8px var(--add_color), 0px 0px 16px var(--add_color), 0px 0px 40px var(--add_color);
+    background-color: var(--color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.3s, width 0.3s;
+}
+.btn_learnWhereIsCursor:active{
+    background-color: orange;
+}
+
+
+/* =====================================================================? */
+/* Это от 3-й кнопки */
+
+
+.left_right {
+    height: 100px;
+    width: 200px;
+    background-color: aqua;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+overflow: hidden;
+}
+.left_right span {
+    height: 100px;
+    width: 200px;
+    background-color: red;
+    display: block;
+    border-radius: 50px;
+    border: none;
+    left: 200px;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    transition: left 2s;
+}
+.left_right p {
+    position: absolute;
+    z-index: 2;
+}
+.left_right:hover.left_right span {
+    left: 0px;
+}
